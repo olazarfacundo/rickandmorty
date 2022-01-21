@@ -1,13 +1,164 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background: url("./img/stars.jpg")
+}
+
+.logo{
+  width: auto;
+  max-width: 100vw;
+  height: 30vh;
+  display: flex;
+  margin: 10vh auto;
+}
+
+.contenedor-personajes{
+  display: grid;
+  place-content: center;
+}
+
+.contenedor{
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 0.900) 0%, rgba(252, 70, 106, 0.900) 100%);
+  margin: 3vh 0;
+  border-radius: 10px;
+  padding: 3vh 2vw;
+}
+
+.contenedor div{
+  margin: 1vh 0;
+  text-align: center;
+}
+
+.menu > div input, select, button{
+  background-color: black;
+  color: rgb(226, 192, 172);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+
+
+@media (max-width: 760px){
+  .logo{
+      width: 100vw;
+      height: auto;
+  }
+
+  .menu{
+      width: 100vw;
+      margin-left: 0;
+  }
+
+  .contenedor-personajes{
+      grid-template-columns: repeat(1, auto);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1050px){
+  .menu{
+      width: 70vw;
+      margin-left: 15vw;
+      margin-right: auto;
+  }
+
+  .contenedor-personajes{
+      grid-template-columns: repeat(2, auto);
+  }
+
+}
+
+@media (min-width: 1051px){
+  .menu{
+      width: 50vw;
+      margin-left: 25vw;
+      margin-right: auto;
+  }
+
+  .contenedor-personajes{
+      grid-template-columns: repeat(3, auto);
+  }
+}
+
+/*Tarjetas de Personajes*/
+
+.tarjeta{
+  background-color: black;
+  color: white;
+  padding: 25px;
+  border: 1px solid black;
+  margin: 2vh 1vw;
+}
+
+.info-estado{
+  display: flex;
+}
+
+.info-estado span{
+  margin-right: 10px;
+}
+
+.estado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 60px;
+  color: rgb(0, 0, 0);
+  font-size: small;
+}
+
+.estado p{
+  margin: 0.2em;
+}
+
+.vivo{
+  background-color: rgb(9, 201, 67);
+}
+
+.muerto{
+  background-color: rgb(218, 64, 64);
+}
+
+.desconocido{
+  background-color: rgb(116, 116, 116);
+  width: 80px;
+}
+
+/*Varios*/
+
+#boton-subir{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(21, 128, 0);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon{
+  transform: scale(2.5);
+  color: white;
+}
+
+#boton-subir :hover{
+  color: black;
+}
+
+.error{
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 3vh 0;
+  border-radius: 10px;
+  padding: 3vh 2vw;
 }

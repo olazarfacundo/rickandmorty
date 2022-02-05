@@ -1,6 +1,5 @@
 {
   "name": "rickandmorty",
-  "homepage": "https://olazarfacundo.github.io/rick-and-morty",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

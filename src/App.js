@@ -5,7 +5,7 @@ import Header from "./Components/Header"
 import Search from "./Components/Search"
 
 
-export default () => {
+export default function App(){
 
   const [episodios, setEpisodios] = useState([])
 

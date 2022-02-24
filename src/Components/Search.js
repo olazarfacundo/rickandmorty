@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import Personaje from "./Personaje"
-import Error from "./Error"
 import ErrorNombre from "./ErrorNombre"
 
 export default function Search(props){
